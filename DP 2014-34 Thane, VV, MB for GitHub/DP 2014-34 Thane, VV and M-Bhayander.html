@@ -82,18 +82,18 @@
 
       var map = L.map('map').setView([45, 10], 6);
       var baselayer =  L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-    	maxZoom: 8,
-    	minZoom: 5,
+    	maxZoom: 13,
+    	minZoom: 0,
     	subdomains:['mt0']}).addTo(map);
 
 
-      var mytile = L.tileLayer('https://github.com/YOUR_GITHUB_HANDLE/PROJECT_NAME/raw/master/TILES_FOLDER/{z}/{x}/{y}.png', {
+      var mytile = L.tileLayer('https://github.com/ankush-krvia/KRVIA-Grids/raw/main/DP 2014-34 Thane, VV, MB for GitHub/{z}/{x}/{y}.png', {
         maxZoom: 13,
-	minZoom: 0,
+	minZoom: 5,
         tms: false
       }).addTo(map);
 
-      L.control.layers({'Basemap':baselayer},{'mf':mytile}).addTo(map);
+      L.control.layers({'Basemap':baselayer},{'Thane DP':mytile}).addTo(map);
 
 function getColor(d) {
     return d == 5  ? '#5E3C99' :
